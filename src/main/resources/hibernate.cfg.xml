@@ -6,12 +6,12 @@
     <session-factory>
         <property name="connection.characterEncoding">UTF-8</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydbtest??useJDBCCompliantTimezoneShift=true;useLegacyDatetimeCode=false;serverTimezone=UTC;/</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/new_db??useJDBCCompliantTimezoneShift=true;useLegacyDatetimeCode=false;serverTimezone=UTC;/</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">newlife11</property>
 
         <property name="hibernate.current_session_context_class">thread</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
         <!-- вывод SQL запросов в консоль -->
         <property name="hibernate.show_sql">true</property>
@@ -20,7 +20,10 @@
         <!-- автоматическое создание и обновление структуры БД -->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <mapping class="hibernateTest.Cat"/>
+       <!-- <mapping class="hibernateTest.Cat"/> -->
+        <mapping class="hibernateTest.Person"/>
+        <mapping class="hibernateTest.PersonInfo"/>
+
 
     </session-factory>
 </hibernate-configuration>

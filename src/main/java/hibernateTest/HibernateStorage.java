@@ -65,8 +65,11 @@ public class HibernateStorage {
         List<Cat> result = null;
         Session session = sessionFactory.openSession();
 
-        String hqlQuery = "from Cat c where c.catName like '%"+catName+"%'";
-        result = session.createQuery(hqlQuery,Cat.class).list();
+        String sqlQuery = "select id,cat_name,weight,sex from Cat where cat_name like '%"+catName+"%'";
+        result = session.createNativeQuery(sqlQuery,Cat.class).list();
+
+//        String hqlQuery = "from Cat c where c.catName like '%"+catName+"%'";
+//        result = session.createQuery(hqlQuery,Cat.class).list();
 
         session.close();
         return result;
@@ -75,7 +78,7 @@ public class HibernateStorage {
     public static void main(String[] args) {
         HibernateStorage storage = new HibernateStorage();
 
-        List<Cat> cats = storage.search("Л");
+        //List<Cat> cats = storage.search("Л");
         /*add record into table
         cat.setCatName("Мася");
         cat.setWeight(3);
@@ -83,6 +86,6 @@ public class HibernateStorage {
         cat.setOwnerId(3);
         new HibernateStorage().createCat(cat);*/
         //     Cat cat = new HibernateStorage().getCatById(4);
-        System.out.println(cats);
+
     }
 }
