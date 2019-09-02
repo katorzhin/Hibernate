@@ -21,8 +21,10 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
        <!-- <mapping class="hibernateTest.Cat"/> -->
-        <mapping class="hibernateTest.Person"/>
-        <mapping class="hibernateTest.PersonInfo"/>
+       <!-- <mapping class="hibernateTest.oneToOne.Person"/>
+        <mapping class="hibernateTest.oneToOne.PersonInfo"/> -->
+        <mapping class="hibernateTest.oneToMany.Cart"/>
+        <mapping class="hibernateTest.oneToMany.CartItem"/>
 
 
     </session-factory>

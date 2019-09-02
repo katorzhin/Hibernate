@@ -1,4 +1,4 @@
-package hibernateTest;
+package hibernateTest.oneToOne;
 
 import javax.persistence.*;
 
