@@ -23,8 +23,10 @@
        <!-- <mapping class="hibernateTest.Cat"/> -->
        <!-- <mapping class="hibernateTest.oneToOne.Person"/>
         <mapping class="hibernateTest.oneToOne.PersonInfo"/> -->
-        <mapping class="hibernateTest.oneToMany.Cart"/>
-        <mapping class="hibernateTest.oneToMany.CartItem"/>
+      <!--  <mapping class="hibernateTest.oneToMany.Cart"/>
+        <mapping class="hibernateTest.oneToMany.CartItem"/> -->
+        <mapping class="hibernateTest.manyToMany.Employee"/>
+        <mapping class="hibernateTest.manyToMany.Project"/>
 
 
     </session-factory>
